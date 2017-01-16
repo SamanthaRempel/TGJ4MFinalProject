@@ -39,9 +39,14 @@ labelTwo.pack()
 '''
 mainloop() is like an infinite loop that runs the program until the user closes the window
 '''
-root.mainloop()
 
 
-#BUTTONS
 
-buttonOne = Button(root, activebackground = red)
+#BUTTONS http://effbot.org/tkinterbook/button.htm
+def callback():
+    print ("Click")
+
+buttonOne = Button(root, activebackground = 'red', command = callback, text = "SAM")
+buttonOne.pack(fill = BOTH, expand = 1)
+
+mainloop()
