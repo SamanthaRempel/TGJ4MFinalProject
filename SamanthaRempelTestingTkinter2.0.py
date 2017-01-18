@@ -15,7 +15,6 @@ label.place(x = 100, y = 100)
 label.pack()
 
 def blackAndWhite():
-    print ("Clicke")
     photoShopImage = Image.open("Flowers1.jpg")
     label.pack_forget()
     photoShopImageEdit = photoShopImage.convert("L")
@@ -27,7 +26,6 @@ def blackAndWhite():
 
 
 def colour():
-    print("Clicked")
     photo = ImageTk.PhotoImage(pic)  # Uses a function in the Image library ImageTk to make it compatible with Tkinter
     label.configure(image=photo)
     label.image = photo
@@ -36,10 +34,10 @@ def colour():
 # BUTTONS http://effbot.org/tkinterbook/button.htm
 
 buttonOne = Button(root, activebackground = 'red', command = blackAndWhite, text = "Black and White")
-
-buttonOne.pack(expand=1)
+buttonOne.place(x = 20, y = 40)
+buttonOne.pack(padx = 5, pady = 10, side = LEFT)
 buttonTwo = Button(root, activebackground = 'red', command = colour, text = "Colour")
-
-buttonTwo.pack(expand=1)
+buttonTwo.place(x = 20, y = 20)
+buttonTwo.pack(padx = 5, pady = 20, side = LEFT)
 
 mainloop()
